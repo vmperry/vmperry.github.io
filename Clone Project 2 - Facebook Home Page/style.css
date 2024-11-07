@@ -1,0 +1,168 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body{
+    height: 100vh;
+   overflow:hidden;
+   background-color: #f0f2f5;
+   font-family: Helvetica, sans-serif;
+}
+
+.main-wrapper{
+    width: 400px;
+    height: 600px;
+    margin:auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.branding{
+    text-align: center;
+}
+
+.logo-container{
+    display: grid;
+    place-items: center;
+    
+}
+.logo{
+    height: 20vh;
+}
+
+.slogan{
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.panel{
+    background-color: white;
+    width: 400px;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 3px 5px 2px rgba(150, 150, 150, 0.2);
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d2d2d2;
+    border-radius: 6px;
+}
+
+input::placeholder{
+    font-size:1.0rem;
+}
+
+input:focus{
+    outline: 1px solid #1877f2;
+}
+
+input:focus::placeholder{
+    color: #c2c2c2;
+}
+
+.log-in-button{
+    background-color:  #1360c4;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.log-in-button:hover{
+    background-color: #1877f2;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.forgot{
+    color: #1877f2;
+    font-size: 0.9rem;
+}
+
+hr{
+    margin: 18px 0;
+    opacity: 0.3;
+}
+
+.register-button{
+    background-color: #42b72a;
+    color: white;
+    display: inline-block;
+   padding: 15px;
+   margin: 10px 0;
+   border-radius: 6px;
+   font-weight: bolder;
+}
+
+.register-button:hover{
+    text-decoration: underline;
+    background-color: #369423;
+}
+
+.bottom-link{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.page{
+    color: black;
+    font-weight: bold;
+}
+
+footer{
+    background-color: white;
+    height:100%;
+    padding: 35px 45px;
+}
+
+ul{
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 0.75rem;
+    color: #7e7e7e;
+    line-height: 1.5;
+}
+
+li{
+    margin-right: 15px;
+}
+
+@media (min-width: 890px) {
+    .main-wrapper {
+        width: 90%;
+        max-width: 980px;
+        flex-direction: row;
+        padding-top: 90px;
+        justify-content: space-between;
+    }
+
+    .branding{
+        text-align:left;
+        padding-top: 80px;
+        width: 450px;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Machine App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cash-machine">
+        <div class="screen">
+            <h1>Main Menu</h1>
+            <div id="menu">
+                <p>1. Show Balance</p>
+                <p>2. Deposit Money</p>
+                <p>3. Withdraw Money</p>
+                <p>4. Exit</p>
+            </div>
+            <div id="output"></div>
+        </div>
+        <div class="buttons">
+            <button onclick="handleMenu(1)">1</button>
+            <button onclick="handleMenu(2)">2</button>
+            <button onclick="handleMenu(3)">3</button>
+            <button onclick="handleMenu(4)">4</button>
+        </div>
+    </div>
+    <script src="cashmachine.js"></script>
+</body>
+</html>

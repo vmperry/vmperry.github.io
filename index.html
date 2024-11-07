@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria Perry's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="Images/portfolio.png" type="image/x-icon">
+</head>
+<body>
+    
+<header class="header">
+        <ul class="nav-links">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <div class="btn-group"></div>
+                <div class="dark-btn" id="dark">Dark Mode</div>
+        </div>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+
+    </header>
+
+    <section id="about" class="about"> 
+        <div class="about-container">
+            <img src="Images/VictoriaPerryPhoto.jpg" alt="Victoria Perry Photo">
+        
+            <div class="info-box">
+
+            <div class="text">
+               <h3>Hi, I'm</h3>
+               <h1>Victoria Perry</h1> 
+               <span>Software Developer, <br>Former Primary School Educator and <br>Computing Curriculum Lead</span>
+            </div>
+
+            <div class="btn-group">
+                <div class="btn">Download CV</div>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+
+            <div class="socials">
+                <a class="fa-brands fa-github" href="https://github.com/vmperry" target="_blank"></a>
+                <a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/victoria-perry-868b5a15a/" target="_blank"></a> 
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section id="experience" class="experience">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-info">
+        <div class="grid">
+            <div class="grid-card">
+            <i class="fa-solid fa-laptop"></i>
+                <span>Web Management and Development</span>
+                <h3>5 Years, Part Time</h3>
+                <p>For the past five years, I have volunteered my time and skills to three organisations in which I have a personal interest. 
+                    I have managed the website for <a class="web-links" href="https://www.heronbankrescue.co.uk/" target="_blank">Heronbank Cat Rescue</a>, 
+                    completely redesigning it and creating content. This has been on a voluntary basis for over five years, as the rescue is a non-profit with limited funds, 
+                    and it is a cause close to my heart. I have also volunteered my time with them in other capacities.
+
+                    <br><br>Additionally, I manage and update the website for <a class="web-links" href="https://yourskinsecretsuk.co.uk/" target="_blank">Skin Secrets</a>, a small business 
+                    in Bedfordshire. I took over this role around two years ago when the business lost its domain name due to negligence from the previous hosting and 
+                    management company. The owner was very distressed, fearing she had lost both the website and the domain. Although the domain had already been purchased
+                     by the time I was brought in, I successfully recovered the website and have been working with the owner to keep it updated ever since.
+                    
+                    <br><br>For the past year, I have also managed the website for my local <a class="web-links" href="https://www.leeds-scuba-club.co.uk/" target="_blank">scuba diving club</a>, 
+                    handling updates and making necessary changes. This role is voluntary, as I am a committee member. I am currently in discussions with the club regarding 
+                    significant updates to the site, which we hope will increase both web traffic and membership.</p>
+            </div>
+
+            <div class="grid-card">
+            <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Primary Education and IT Curriculum Leadership</span>
+                <h3>14 Years, Full Time</h3>
+                <p>As a primary teacher, I have developed a wide range of transferable skills that are directly applicable to software development. 
+                    My ability to break down complex concepts into simple, manageable steps has been key to teaching diverse learners and is equally valuable 
+                    in coding and problem-solving. Strong communication skills, adaptability, and the capacity to think critically and systematically have been 
+                    central to my teaching practice. These skills enable me to approach software development with clear, logical thinking and an ability to convey 
+                    technical information effectively to both technical and non-technical audiences.
+
+                    <br><br>As a computing curriculum lead, I led the design and implementation of the computing syllabus across multiple year groups. 
+                    This involved project management, collaborating with colleagues, and ensuring that the curriculum met national standards while fostering 
+                    digital literacy and programming skills among students. I gained a deep understanding of programming fundamentals, problem-solving, and 
+                    critical thinking, which I integrated into lessons to engage and inspire pupils. My experience in curriculum coordination has honed my 
+                    organisational skills, attention to detail, and ability to manage complex tasks, all of which are essential in software development.</p>
+            </div>
+
+            <div class="grid-card">
+            <i class="fa-solid fa-shop"></i>
+                <span>Service Industry</span>
+                <h3>7 Years, Part Time</h3>
+                <p>While studying at school, college and university, I gained seven years of experience in the service industry. 
+                    This included roles as a retail assistant, barmaid, and silver service waitress, I developed a range of transferable 
+                    skills that are highly relevant to software development. These roles required excellent communication, the ability to work 
+                    efficiently under pressure, and strong problem-solving skills to manage customer needs and resolve issues promptly. 
+                    I also gained valuable experience in teamwork, adaptability, and time management, balancing multiple tasks and priorities 
+                    in fast-paced environments. These skills, along with a strong work ethic and attention to detail, provide a solid foundation 
+                    for my transition into software development, where clear communication, collaboration, and the ability to meet deadlines are essential.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+
+    <h2 class="section-title">Recent Projects</h2>
+    
+    <div class="projects-container">
+    
+    <button class="scroll-button left">&lt;</button>
+
+    <div class="projects-grid">
+
+        <div class="project-card" id="diver-game-card">
+            <img src="Images/fin kicks.PNG" alt="Fin Kicks Game">
+            <h3>Fin Kicks Game</h3>
+            <p>This is a fun and interactive game where you control a scuba diver to collect various underwater items while avoiding obstacles. 
+                Gain points by collecting 'good' items and lose points by hitting 'bad' obstacles. 
+                </p>
+            <div class="btn-group">
+                <a class="btn" href="Fin Kicks Game/index.html" target="_blank">Test App</a>
+                <a class="btn" href="https://github.com/vmperry/Fin-Kicks" target="_blank">GitHub</a>
+            </div>
+            </div>
+        
+        <div class="project-card" id="calculator-card">
+            <img src="Images/calculator.PNG" alt="calculator project">
+            <h3>Calculator Project</h3>
+            <p>This is a simple yet functional calculator app built with HTML, CSS, and JavaScript. 
+                The calculator can handle basic arithmetic operations and has a user-friendly interface that mimics the look and feel of the Google calculator.
+                 It supports both keyboard and mouse interactions, making it versatile and easy to use.</p>
+            <div class="btn-group">
+                <a class="btn" href="calculator/calculator.html" target="_blank">Test App</a>
+                <a class="btn" href="https://youtu.be/ZZrz12meF9c" target="_blank">Demo</a>
+                <a class="btn" href="https://github.com/vmperry/calculator-app" target="_blank">GitHub</a>
+            </div>
+            </div>
+              
+                  
+            <div class="project-card" id="weather-card">
+                <img src="Images/Weather App.PNG" alt="weather app project">
+                <h3>Weather App Project</h3>
+                <p>This Weather App is a simple web application that allows users to check the current weather conditions for any city. 
+                    It fetches data from the OpenWeatherMap API and displays the temperature, humidity, wind speed, and weather conditions.
+                    </p>
+                <div class="btn-group">
+                    <a class="btn" href="Weather App/weatherapp.html" target="_blank">Test App</a>
+                    <a class="btn" href="https://youtu.be/HmUVSkk9Yo0" target="_blank">Demo</a>
+                    <a class="btn" href="https://github.com/vmperry/Weather-App" target="_blank">GitHub</a>
+                </div>
+                </div>
+            
+                <div class="project-card" id="Cash_Machine">
+                    <img src="Images/cash machine.PNG" alt="Cash Machine Project">
+                    <h3>Cash Machine Project</h3>
+                    <p>This is a simple cash machine application which uses html, JavaScript and css. 
+                        The app allows users to check their balance, deposit money, withdraw money, and exit the menu.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="Cash Machine/index.html" target="_blank">Test App</a>
+                        <a class="btn" href="https://github.com/vmperry/Cash-Machine/" target="_blank">GitHub</a>
+                    </div>
+                    </div>
+
+                <div class="project-card" id="python-quiz-card">
+                    <img src="Images/quiz.PNG" alt="Python Quiz Project">
+                    <h3>Python Quiz</h3>
+                    <p>This is a simple command-line quiz application designed to test your BSAC Diver knowledge. 
+                        The application consists of three multiple-choice quizzes related to the Ocean Diver, 
+                        Sports Diver and Dive Leader theory packs.
+                    </p>
+                    <div class="btn-group">
+                        <a class="btn" href="PythonProjects.html#quiz">Run Code</a>
+                        <a class="btn" href="https://trinket.io/library/trinkets/2a513009298c" target="_blank">Download Code</a>
+                    </div>
+                    </div>
+
+                <div class="project-card" id="python-playlist-card">
+                        <img src="Images/music playlist.PNG" alt="Python Music Playlist Project">
+                        <h3>Python Music Playlist</h3>
+                        <p>This code creates a simple command-line interface for managing a playlist of songs. 
+                            It allows users to view, add, update, and delete songs from the playlist. 
+                            The playlist is stored as a dictionary, where each song title is a key, and the value 
+                            is another dictionary containing the genre and artist of the song.
+                        </p>
+                        <div class="btn-group">
+                            <a class="btn" href="PythonProjects.html#playlist">Run Code</a>
+                            <a class="btn" href="https://trinket.io/library/trinkets/3d8a6755deb9" target="_blank">Download Code</a>
+                        </div>
+                        </div>
+
+            <div class="project-card" id="google-card">
+            <img src="Images/google clone.PNG" alt="Google clone project">
+            <h3>Google Webpage Clone</h3>
+            <p>This Google homepage clone is a simplified version of the iconic Google search engine interface. 
+                It features a clean, minimalistic design with a centered search bar, the familiar "Google" logo above it, 
+                and two primary buttons beneath: "Google Search" and "I'm Feeling Lucky".</p>
+            <div class="btn-group">
+                <a class="btn" href="Clone Project 1- Google Home Page/index.html" target="_blank">Run Code</a>
+                <a class="btn" href="https://youtu.be/SkC-oL6ak9k" target="_blank">Demo</a>
+                <a class="btn" href="https://github.com/vmperry/Project-1---Google-Home-Page-Clone" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="facebook-card">
+            <img src="Images/facebook clone.PNG" alt="Facebook Clone projects">
+            <h3>Facebook Webpage Clone</h3>
+            <p>This Facebook login screen clone replicates the familiar interface used to access Facebook accounts. 
+                The page features a blue header with the Facebook logo in the upper left corner. 
+                Below, there are fields for users to input their email or phone number and password, along with a prominent "Log In" button. 
+                Beneath the login fields, 'dummy' links like "Forgotten password?" and "Create New Account" are available, offering account recovery or sign-up options.</p>
+            <div class="btn-group">
+                <a class="btn" href="Clone Project 2 - Facebook Home Page/index.html" target="_blank">Run Code</a>
+                <a class="btn" href="https://youtu.be/lDEvfryTaF8" target="_blank">The Making of...</a>
+            </div>
+            <div class="btn-group">
+                <a class="btn" href="https://youtu.be/SkC-oL6ak9k" target="_blank">Demo</a>
+                <a class="btn" href="https://github.com/vmperry/Project-2---Facebook-Home-Page-Clone" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="instagram-card">
+        <img src="Images/instagram clone.PNG" alt="instagram clone project">
+        <h3>Instagram Webpage Clone</h3>
+        <p>This Instagram webpage clone mirrors the clean and simple design of the official Instagram login page.
+            Due to the responsive design, on wider screens, a
+            mockup of a smartphone showing the Instagram interface is displayed on the right side. As the screen size decreases 
+            the phone mockup disappears, and the login form shifts to center for a clean, focused layout, ensuring an optimal user experience 
+            across all devices.</p>
+        <div class="btn-group">
+            <a class="btn" href="Clone Project 3 - Instagram Log In Page/index.html" target="_blank">Run Code</a>
+            <a class="btn" href="https://youtu.be/g_waqhJb6-Y" target="_blank">The Making of...</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://youtu.be/SkC-oL6ak9k" target="_blank">Demo</a>
+            <a class="btn" href="https://github.com/vmperry/Project-3---Instagram-Home-Page-Clone" target="_blank">GitHub</a>
+        </div>
+        </div>
+
+                   
+            <div class="project-card" id="mysql-card">
+                <img src="Images/mySQL.PNG" alt="MySQL project">
+                <h3>MySQL Breakdown Service Database Project</h3>
+                <p>This project involves creating and managing a MySQL database for a breakdown company. 
+                    The database is designed to handle member registrations, vehicle ownership, and breakdown incidents efficiently. 
+                    It integrates member, vehicle, and engineer data to ensure high organization, accuracy, and accessibility, 
+                    which is crucial for delivering exceptional service and maintaining a competitive edge.</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://youtu.be/mTeaxBgPjIk" target="_blank">Demo</a>
+                    <a class="btn" href="https://github.com/vmperry/MySQL-Breakdown-Service-Database" target="_blank">GitHub</a>
+                </div>
+                </div>
+                <button class="scroll-button right">&gt;</button>
+            </div>
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-grid">
+
+    <form action="https://formspree.io/f/xwpeknna" method="POST">
+    
+       
+        <fieldset> 
+
+                
+            <label for="name">Name:</label> 
+    
+            <input class="input-box" type="text" id="name" name="name" required><br><br> 
+    
+            <label for="tel">Tel:</label> 
+    
+            <input class="input-box" type="number" minlength="11" id="tel" name="tel" required><br><br> 
+    
+            <label for="email">Email:</label> 
+    
+            <input class="input-box" type="email" id="email" name="_replyto" required><br><br> 
+    
+                   
+     
+    
+            <label for="message">Message:</label> 
+    
+            <textarea class="input-box" id="message" name="message" rows="4" cols="50" required></textarea><br><br> 
+    
+             
+    
+            <!-- Hidden field --> 
+    
+            <input type="hidden" name="_subject" value="New submission!"> 
+    
+             
+    
+            <input class="btn-send" type="submit" value="Send"> 
+    
+        </fieldset> 
+    
+    </form> 
+</div>
+           
+</section>
+
+<footer>
+
+    <ul class="footer">
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <p class="copyright">© All Rights Reserved | Victoria Perry</p>
+
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

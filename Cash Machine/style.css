@@ -1,0 +1,48 @@
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cash-machine {
+    background-color: #222;
+    border: 5px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+    background-color: #000;
+    color: #0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f0;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+    color: #0f0;
+}

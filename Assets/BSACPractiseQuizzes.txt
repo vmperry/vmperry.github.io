@@ -1,0 +1,308 @@
+# Formatting Variables
+format_output = "\033[47m\033[30m"
+format_reset = "\033[0m"
+
+def welcome_message():
+    print("Welcome to the Quiz Game!")
+    print("You will be presented with multiple-choice questions.")
+    print("Type the number of the correct answer and press Enter.\n")
+
+def ask_question(question, options, correct_answer):
+    print(question)
+    for option in options:
+        print(option)
+    
+    valid_answers = [str(i+1) for i in range(len(options))]  
+    answer = input("Enter (1, 2, 3, 4): ").strip()
+    
+    while answer not in valid_answers:
+        print("Invalid choice. Please select a valid answer.")
+        answer = input("Enter (1, 2, 3, 4): ").strip()
+    
+    return answer == correct_answer
+
+# Quiz 1
+def ocean_diver_quiz():
+    print("Welcome to the Ocean Diver Practise Quiz!")
+    
+    questions = (
+        "Question 1) What is the primary purpose of a buoyancy control device (BCD)?", 
+        "Question 2) What is the recommended maximum depth for an Ocean Diver?",
+        "Question 3) Which gas is primarily responsible for decompression sickness?",
+        "Question 4) What is the function of a dive computer?",
+        "Question 5) What should you do if you experience a rapid ascent?", 
+        "Question 6) What is the primary symptom of nitrogen narcosis?",
+        "Question 7) Which piece of equipment is essential for underwater navigation?",
+        "Question 8) What is the purpose of a safety stop during ascent?",
+        "Question 9) How often should you check your air supply during a dive?",
+        "Question 10) What is the first step in assisting a diver with suspected decompression sickness?"
+    )
+
+    options = (
+        ("1) To provide thermal insulation", "2) To store extra air", "3) To control buoyancy underwater", "4) To protect against marine life"),  
+        ("1) 10 meters", "2) 20 meters", "3) 30 meters", "4) 40 meters"),
+        ("1) Nitrogen", "2) Oxygen", "3) Carbon dioxide", "4) Helium"),
+        ("1) To measure water temperature", "2) To calculate no-decompression limits", "3) To communicate with other divers", "4) To store dive gear"),
+        ("1) Continue ascending quickly", "2) Descend immediately", "3) Perform a safety stop if possible", "4) Inflate your BCD fully"),
+        ("1) Dizziness", "2) Euphoria or impaired judgment", "3) Shortness of breath", "4) Muscle cramps"),
+        ("1) Dive knife", "2) Compass", "3) Dive light", "4) Snorkel"),
+        ("1) To conserve air", "2) To check equipment", "3) To communicate with the dive buddy", "4) To allow nitrogen to off-gas"),
+        ("1) Every 5 minutes", "2) Every 10 minutes", "3) Continuously", "4) Only at the beginning and end of the dive"),
+        ("1) Administer oxygen", "2) Perform CPR", "3) Recompress the diver", "4) Call for emergency medical help")
+    )
+
+    answers = (
+        "3",
+        "2",
+        "1",
+        "2",
+        "3",
+        "2",
+        "2",
+        "4",
+        "3",
+        "1"
+    )
+
+    guesses = []
+    score = 0 
+    question_num = 0
+
+    for question in questions:
+        print(f"{format_output}---------------{format_reset}")
+        print(question)
+        for option in options[question_num]:
+            print(option)
+
+        guess = input("Enter (1, 2, 3, 4): ")
+        guesses.append(guess)
+        if guess == answers[question_num]:
+            score += 1
+            print("Correct!")
+        else:
+            print("Incorrect!")
+            print("Option {} is the correct answer".format(answers[question_num]))
+        question_num += 1
+
+    print(" ")
+    print("-------------------")
+    print(f"{format_output}      RESULTS      {format_reset}")
+    print("-------------------")
+
+    score_percentage = int(score / len(questions) * 100)
+    print("\nYour score is: {}%".format(score_percentage))
+
+    print(" ")
+    print("Correct answers: ", end="")
+    for answer in answers:
+        print(answer, end=" ")
+
+    print("\nYour guesses: ", end="")
+    for guess in guesses:
+        print(guess, end=" ")
+
+    print(" ")
+    print(" ")
+    play_again()
+# end of quiz 
+
+# Quiz 2
+def sports_diver_quiz():
+    print("Welcome to the Sports Diver Practise Quiz!")
+    
+    questions = (
+        "Question 1) What is the primary purpose of a dive plan?", 
+        "Question 2) What is the recommended maximum depth for a Sports Diver?",
+        "Question 3) Which piece of equipment is used to measure the depth of a dive?",
+        "Question 4) What is the primary function of a surface marker buoy (SMB)?",
+        "Question 5) What should you do if you lose your dive buddy underwater?", 
+        "Question 6) What is the primary cause of decompression sickness?",
+        "Question 7) Which gas is used in nitrox mixtures to extend bottom time?",
+        "Question 8) What is the purpose of a buddy check before a dive?",
+        "Question 9) How should you respond to a diver experiencing panic underwater?",
+        "Question 10) What is the primary benefit of using a dive computer?"
+    )
+
+    options = (
+        ("1) To ensure safety and organization", "2) To impress other divers", "3) To reduce air consumption", "4) To navigate underwater"),  
+        ("1) 20 meters", "2) 30 meters", "3) 35 meters", "4) 40 meters"),
+        ("1) Dive computer", "2) Compass", "3) Pressure gauge", "4) Dive knife"),
+        ("1) To signal the diver's position to the surface", "2) To provide extra buoyancy", "3) To store emergency supplies", "4) To measure water temperature"),
+        ("1) Continue the dive alone", "2) Ascend immediately", "3) Search for one minute, then ascend", "4) Signal for help"),
+        ("1) Rapid ascent", "2) Cold water", "3) Poor visibility", "4) Overexertion"),
+        ("1) Helium", "2) Nitrogen", "3) Oxygen", "4) Carbon dioxide"),
+        ("1) To ensure all equipment is functioning properly", "2) To practice emergency procedures", "3) To plan the dive route", "4) To test buoyancy control"),
+        ("1) Ignore them", "2) Ascend as quickly as possible", "3) Calm them down and ascend slowly", "4) Inflate their BCD fully"),
+        ("1) It looks cool", "2) It provides real-time dive data", "3) It replaces the need for a buddy", "4) It reduces air consumption")
+    )
+
+    answers = (
+        "1",
+        "4",
+        "1",
+        "1",
+        "3",
+        "1",
+        "3",
+        "1",
+        "3",
+        "2"
+    )
+
+    guesses = []
+    score = 0 
+    question_num = 0
+
+    for question in questions:
+        print(f"{format_output}---------------{format_reset}")
+        print(question)
+        for option in options[question_num]:
+            print(option)
+
+        guess = input("Enter (1, 2, 3, 4): ")
+        guesses.append(guess)
+        if guess == answers[question_num]:
+            score += 1
+            print("Correct!")
+        else:
+            print("Incorrect!")
+            print("Option {} is the correct answer".format(answers[question_num]))
+        question_num += 1
+
+    print(" ")
+    print("-------------------")
+    print(f"{format_output}      RESULTS      {format_reset}")
+    print("-------------------")
+
+    score_percentage = int(score / len(questions) * 100)
+    print("\nYour score is: {}%".format(score_percentage))
+
+    print(" ")
+    print("Correct answers: ", end="")
+    for answer in answers:
+        print(answer, end=" ")
+
+    print("\nYour guesses: ", end="")
+    for guess in guesses:
+        print(guess, end=" ")
+
+    print(" ")
+    print(" ")
+    play_again()
+# end of quiz 
+
+# Quiz 3 - Dive Leader
+def dive_leader_quiz():
+    print("Welcome to the Dive Leader Practise Quiz!")
+    
+    questions = (
+        "Question 1) What is the primary role of a Dive Leader?", 
+        "Question 2) Which of the following is a key responsibility of a Dive Leader during a dive?",
+        "Question 3) What is the recommended action if a diver shows signs of decompression sickness?",
+        "Question 4) Which piece of equipment is essential for underwater navigation?",
+        "Question 5) What is the purpose of a safety stop during ascent?", 
+        "Question 6) How often should a Dive Leader check their air supply during a dive?",
+        "Question 7) What is the primary symptom of nitrogen narcosis?",
+        "Question 8) Which gas is primarily responsible for decompression sickness?",
+        "Question 9) What should you do if you lose your dive buddy underwater?",
+        "Question 10) What is the function of a dive computer?"
+    )
+
+    options = (
+        ("1) To plan and lead dives", "2) To provide first aid", "3) To teach new divers", "4) To maintain diving equipment"),  
+        ("1) Monitoring air supply of all divers", "2) Conducting underwater photography", "3) Collecting marine samples", "4) Recording water temperature"),
+        ("1) Perform CPR immediately", "2) Administer oxygen and seek medical help", "3) Encourage the diver to rest and hydrate", "4) Recompress the diver underwater"),
+        ("1) Dive knife", "2) Compass", "3) Dive light", "4) Snorkel"),
+        ("1) To conserve air", "2) To check equipment", "3) To allow nitrogen to off-gas", "4) To communicate with the dive buddy"),
+        ("1) Every 5 minutes", "2) Every 10 minutes", "3) Continuously", "4) Only at the beginning and end of the dive"),
+        ("1) Dizziness", "2) Euphoria or impaired judgment", "3) Shortness of breath", "4) Muscle cramps"),
+        ("1) Nitrogen", "2) Oxygen", "3) Carbon dioxide", "4) Helium"),
+        ("1) Continue the dive alone", "2) Ascend immediately", "3) Search for one minute, then ascend", "4) Signal for help"),
+        ("1) To measure water temperature", "2) To calculate no-decompression limits", "3) To communicate with other divers", "4) To store dive gear")
+    )
+
+    answers = (
+        "1",
+        "1",
+        "2",
+        "2",
+        "3",
+        "3",
+        "2",
+        "1",
+        "3",
+        "2"
+    )
+
+    guesses = []
+    score = 0 
+    question_num = 0
+
+    for question in questions:
+        print(f"{format_output}---------------{format_reset}")
+        print(question)
+        for option in options[question_num]:
+            print(option)
+
+        guess = input("Enter (1, 2, 3, 4): ")
+        guesses.append(guess)
+        if guess == answers[question_num]:
+            score += 1
+            print("Correct!")
+        else:
+            print("Incorrect!")
+            print("Option {} is the correct answer".format(answers[question_num]))
+        question_num += 1
+
+    print(" ")
+    print("-------------------")
+    print(f"{format_output}      RESULTS      {format_reset}")
+    print("-------------------")
+
+    score_percentage = int(score / len(questions) * 100)
+    print("\nYour score is: {}%".format(score_percentage))
+
+    print(" ")
+    print("Correct answers: ", end="")
+    for answer in answers:
+        print(answer, end=" ")
+
+    print("\nYour guesses: ", end="")
+    for guess in guesses:
+        print(guess, end=" ")
+
+    print(" ")
+    print(" ")
+    play_again()
+# End of quiz
+
+def play_again():
+    choice = input(f"{format_output}Would you like to play another quiz? (y/n): {format_reset}").strip().lower()
+    if choice == 'y':
+        main_menu()
+    else:
+        print("Thank you for playing the Quiz Game!")
+
+def main_menu():
+    print(f"{format_output}---Main Menu---{format_reset}")
+    print(f"{format_output}1. Ocean Diver Practise Quiz{format_reset}")
+    print(f"{format_output}2. Sports Diver Practise Quiz{format_reset}")
+    print(f"{format_output}3. Dive Leader Practise Quiz{format_reset}")
+    print(f"{format_output}4. Exit{format_reset}")
+    
+    choice = input("Select a quiz to play (1/2/3): ").strip()
+    
+    if choice == '1':
+        ocean_diver_quiz()
+    elif choice == '2':
+        sports_diver_quiz()
+    elif choice == '3':
+        dive_leader_quiz()
+    elif choice == '4':
+        print("Goodbye!")
+    else:
+        print("Invalid choice. Please select a valid option.")
+        main_menu()
+
+if __name__ == "__main__":
+    main_menu()
